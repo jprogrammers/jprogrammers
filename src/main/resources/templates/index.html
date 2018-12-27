@@ -1,11 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
     <title>jprogrammers</title>
+    <div th:replace="fragments/header :: header-css"/>
 </head>
 
 <body>
+    <div th:replace="fragments/header :: header"/>
     this is jprogrammers
+    <div th:each="item : ${menu}">
+        <label th:text="${item}"></label>
+    </div>
 </body>
 
 </html>
